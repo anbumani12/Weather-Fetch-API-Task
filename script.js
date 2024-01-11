@@ -1,4 +1,3 @@
-
 const url = "https://restcountries.com/v3.1/all";
 fetch(url)
   .then((data) => data.json())
@@ -20,7 +19,7 @@ fetch(url)
           ? country.name.nativeName.eng.common || "N/A"
           : "N/A";
 
-          countryDiv.innerHTML = `
+      countryDiv.innerHTML = `
           <div class="card h-100">
               <div class="card-header">
                   <h5 class="card-title">${country.name.common}</h5>
@@ -41,7 +40,7 @@ fetch(url)
           `;
       countriesContainer.appendChild(countryDiv);
     }
- });
+  });
 
 function getWeatherData(latitude, longitude, countryCode) {
   const apiKey = "8a02350c859d72fd590d6f4bb751370d";
